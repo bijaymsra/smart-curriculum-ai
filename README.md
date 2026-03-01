@@ -10,7 +10,7 @@ Smart Curriculum AI is a lightweight, secure, and fully containerized AI chatbot
 - 🐳 Docker & Docker Compose
 - ☁️ AWS EC2 Deployment Ready
 
-This project is designed to run seamlessly on:
+This project runs seamlessly on:
 - Local machine (Mac/Linux)
 - Ubuntu Server
 - AWS EC2 instance
@@ -46,14 +46,17 @@ ai-bot/
 │
 ├── backend/                 # FastAPI backend
 │   ├── backend.py
-│   └── Dockerfile
+│   ├── Dockerfile
 │
 ├── frontend/                # React frontend
 │   ├── Dockerfile
+│   ├── .env (ignored)
+│   ├── .env.example
 │   └── frontend/
 │
-├── docker-compose.yml       # Multi-container setup
-├── run.sh                   # Automated startup script
+├── docker-compose.yml
+├── run.sh
+├── .gitignore
 └── README.md
 ```
 
@@ -93,7 +96,48 @@ I am Smart Curriculum AI, your academic assistant.
 
 ---
 
-# ⚙️ Environment Variables
+# ⚙️ Frontend Environment Setup
+
+The React frontend uses environment variables.
+
+Inside:
+
+```
+frontend/
+```
+
+Create a `.env` file:
+
+```
+REACT_APP_API_URL=/chat
+```
+
+For development (if backend running separately):
+
+```
+REACT_APP_API_URL=http://localhost:8000/chat
+```
+
+---
+
+## 📄 .env.example
+
+We provide a template file:
+
+```
+REACT_APP_API_URL=/chat
+```
+
+After cloning the repo:
+
+```
+cd frontend
+cp .env.example .env
+```
+
+---
+
+# ⚙️ Backend Environment Variables
 
 Defined inside `docker-compose.yml`:
 
@@ -249,6 +293,7 @@ Production Best Practices:
 - Restrict Ollama port internally
 - Add domain mapping
 - Use CI/CD pipeline
+- Prefer relative API path (`/chat`) instead of hardcoded IP
 
 ---
 
@@ -289,7 +334,7 @@ This project demonstrates:
 
 # 🧑‍💻 Author
 
-Developed by Bijay Mishra
+Developed by Bijay Mishra  
 Smart Curriculum AI – Lightweight Academic Assistant
 
 ---
