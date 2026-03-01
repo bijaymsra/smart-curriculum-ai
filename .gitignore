@@ -2,14 +2,14 @@
 node_modules/
 npm-debug.log
 
-# React env
-frontend/.env
+# React env (ignore all env files everywhere)
+**/.env
 
-# Backend env (if any)
-backend/.env
+# Keep example file
+!**/.env.example
 
 # Build folders
-frontend/build/
+build/
 dist/
 
 # OS files
