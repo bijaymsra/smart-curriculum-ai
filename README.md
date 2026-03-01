@@ -1,19 +1,32 @@
 # 🤖 Smart Curriculum AI
 
+<p align="center">
+  <img src="https://img.shields.io/badge/Docker-Containerized-blue"/>
+  <img src="https://img.shields.io/badge/FastAPI-Backend-green"/>
+  <img src="https://img.shields.io/badge/React-Frontend-blue"/>
+  <img src="https://img.shields.io/badge/AWS-EC2-orange"/>
+  <img src="https://img.shields.io/badge/Ollama-LLM-black"/>
+</p>
+
+<p align="center">
+  <img src="./screenshots/smart-curriculum-ai.png" width="900" alt="Smart Curriculum AI Dashboard"/>
+</p>
+
 > A Production-Ready, Dockerized AI Chatbot powered by a Local LLM
 
 Smart Curriculum AI is a lightweight, secure, and fully containerized AI chatbot stack built using:
 
-- 🧠 Ollama (Local LLM Runtime)
-- ⚡ FastAPI (Python Backend)
-- 🎨 React + TailwindCSS (Frontend)
-- 🐳 Docker & Docker Compose
-- ☁️ AWS EC2 Deployment Ready
+- 🧠 Ollama (Local LLM Runtime)  
+- ⚡ FastAPI (Python Backend)  
+- 🎨 React + TailwindCSS (Frontend)  
+- 🐳 Docker & Docker Compose  
+- ☁️ AWS EC2 Deployment Ready  
 
 This project runs seamlessly on:
-- Local machine (Mac/Linux)
-- Ubuntu Server
-- AWS EC2 instance
+
+- Local machine (Mac/Linux)  
+- Ubuntu Server  
+- AWS EC2 instance  
 
 ---
 
