@@ -7,7 +7,6 @@ export default function Bot() {
   const [darkMode, setDarkMode] = useState(false);
   const messagesEndRef = useRef(null);
 
-  // Auto scroll to latest message
   useEffect(() => {
     messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
   }, [messages, loading]);
@@ -21,9 +20,8 @@ export default function Bot() {
     setLoading(true);
 
     try {
-      const response = await fetch(
-        process.env.REACT_APP_API_URL || "http://3.110.74.87:8000/chat",
-        {
+      const API_URL = process.env.REACT_APP_API_URL;
+      const response = await fetch(API_URL, {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({ message: input }),
