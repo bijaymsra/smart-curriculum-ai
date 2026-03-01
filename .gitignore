@@ -2,15 +2,19 @@
 node_modules/
 npm-debug.log
 
-# React env (ignore all env files everywhere)
+# Env files
+.env
+.env.*
 **/.env
-
-# Keep example file
 !**/.env.example
 
-# Build folders
+# Build
 build/
 dist/
 
-# OS files
+# Docker logs
+*.log
+
+# OS
 .DS_Store
+Thumbs.db
